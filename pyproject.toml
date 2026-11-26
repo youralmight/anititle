@@ -1,0 +1,27 @@
+[project]
+name = "anititle"
+version = "0.1.0"
+description = "Match anime release titles to AniList entries and episodes with an agent"
+readme = "README.md"
+authors = [
+    { name = "Yi (Justice) Zhang" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain>=1.5.0",
+    "langchain-openai>=1.8.1",
+    "opencc-python-reimplemented>=0.1.7",
+]
+
+[project.scripts]
+anititle = "anititle.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
